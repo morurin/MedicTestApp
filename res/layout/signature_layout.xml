@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sign="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_opacity">
+
+
+    <com.kyanogen.signatureview.SignatureView
+        android:id="@+id/signatureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        sign:enableSignature="true"
+        sign:penColor="@color/white"
+        sign:backgroundColor="@color/custom_opacity"
+        sign:penSize="5dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/custom_opacity">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="150dp"
+            android:fontFamily="@font/bad_script"
+            android:lineSpacingMultiplier="0.5"
+            android:text="Firma aquí\n↓"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cancelSignature"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/clear"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:backgroundTint="@color/custom_color2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saveSignature"
+            sign:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/saveSignature"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/button_save"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:backgroundTint="@color/custom_color2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cancelSignature"
+            tools:ignore="TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

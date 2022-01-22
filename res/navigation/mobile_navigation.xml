@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.neko.quileiamedic.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_patientFragment"
+            app:destination="@id/patientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.neko.quileiamedic.ui.doctor.DoctorFragment"
+        android:label="fragment_doctor"
+        tools:layout="@layout/fragment_doctor" >
+        <action
+            android:id="@+id/action_doctorFragment_to_doctorDetailsFragment"
+            app:destination="@id/doctorDetailsFragment" />
+        <action
+            android:id="@+id/action_doctorFragment_to_newDoctorFragment"
+            app:destination="@id/newDoctorFragment" />
+        <action
+            android:id="@+id/action_doctorFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientFragment"
+        android:name="com.neko.quileiamedic.ui.patient.PatientFragment"
+        android:label="fragment_patient"
+        tools:layout="@layout/fragment_patient" >
+        <action
+            android:id="@+id/action_patientFragment_to_newPatientFragment"
+            app:destination="@id/newPatientFragment" />
+        <action
+            android:id="@+id/action_patientFragment_to_patientDetailsFragment"
+            app:destination="@id/patientDetailsFragment" />
+        <action
+            android:id="@+id/action_patientFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorDetailsFragment"
+        android:name="com.neko.quileiamedic.ui.doctor.DoctorDetailsFragment"
+        android:label="fragment_patient"
+        tools:layout="@layout/fragment_doctor_details" >
+        <action
+            android:id="@+id/action_doctorDetailsFragment_to_doctorHistoryFragment"
+            app:destination="@id/doctorHistoryFragment" />
+        <action
+            android:id="@+id/action_doctorDetailsFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDoctorFragment"
+        android:name="com.neko.quileiamedic.ui.doctor.NewDoctorFragment"
+        android:label="fragment_new_doctor"
+        tools:layout="@layout/fragment_new_doctor" >
+        <action
+            android:id="@+id/action_newDoctorFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPatientFragment"
+        android:name="com.neko.quileiamedic.ui.patient.NewPatientFragment"
+        android:label="fragment_new_patient"
+        tools:layout="@layout/fragment_new_patient" >
+        <action
+            android:id="@+id/action_newPatientFragment_to_patientFragment"
+            app:destination="@id/patientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientDetailsFragment"
+        android:name="com.neko.quileiamedic.ui.patient.PatientDetailsFragment"
+        android:label="fragment_patient_details"
+        tools:layout="@layout/fragment_patient_details" >
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_patientHistoryFragment"
+            app:destination="@id/patientHistoryFragment" />
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_newAppointmentFragment"
+            app:destination="@id/newAppointmentFragment" />
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_patientFragment"
+            app:destination="@id/patientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientHistoryFragment"
+        android:name="com.neko.quileiamedic.ui.patient.PatientHistoryFragment"
+        android:label="fragment_patient_history"
+        tools:layout="@layout/fragment_patient_history" >
+        <action
+            android:id="@+id/action_patientHistoryFragment_to_patientDetailsFragment"
+            app:destination="@id/patientDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAppointmentFragment"
+        android:name="com.neko.quileiamedic.ui.patient.NewAppointmentFragment"
+        android:label="fragment_new_appointment"
+        tools:layout="@layout/fragment_new_appointment" >
+        <action
+            android:id="@+id/action_newAppointmentFragment_to_patientDetailsFragment"
+            app:destination="@id/patientDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorHistoryFragment"
+        android:name="com.neko.quileiamedic.ui.doctor.DoctorHistoryFragment"
+        android:label="fragment_doctor_history"
+        tools:layout="@layout/fragment_doctor_history">
+        <action
+            android:id="@+id/action_doctorHistoryFragment_to_doctorDetailsFragment"
+            app:destination="@id/doctorDetailsFragment" />
+    </fragment>
+
+</navigation>

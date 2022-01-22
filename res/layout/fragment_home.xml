@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4F9FB"
+    tools:context=".ui.home.HomeFragment">
+
+    <Button
+        android:id="@+id/doctorHomeButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="315dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/doctor_home"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:backgroundTint="@color/custom_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/patientHomeButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/patient_home"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:backgroundTint="@color/custom_color2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctorHomeButton"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="49dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/type_user"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/doctorHomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

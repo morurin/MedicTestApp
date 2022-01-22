@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8F0F3"
+    tools:context=".ui.patient.NewAppointmentFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/patientDoctorPicker"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="12dp"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/assignedDoctor"
+                android:importantForAutofill="no"
+
+                android:longClickable="false"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/patientTimePicker"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="12dp"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/appointmentTime"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:longClickable="false"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/patientDatePicker"
+                app:layout_constraintTop_toBottomOf="@+id/patientDoctorPicker"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/patientDatePicker"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="28dp"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/appointmentDate"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:longClickable="false"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientDoctorPicker"
+                tools:ignore="TextContrastCheck" />
+
+
+            <Button
+                android:id="@+id/saveAppointmentButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/button_save"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancelAppointmentButton"
+                app:layout_constraintTop_toBottomOf="@+id/patientDatePicker"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/cancelAppointmentButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/saveAppointmentButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientDatePicker"
+                tools:ignore="TextContrastCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4F9FB"
+    tools:context=".ui.patient.PatientDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck,UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/patientPicView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/patient_pic_d"
+                android:src="@drawable/patient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/patientNameView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center|start"
+                android:text="@string/nameLastname"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientDateButton"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/patientBirthView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="@string/birthdate"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientNameView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/patientDateView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="@string/last_date"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientDoctorView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/patientDoctorView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="@string/patient_doctor"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientIdView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/patientIdView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="@string/patient_id"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientBirthView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/patientQuotaView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="@string/patient_quota"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientDateView" />
+
+            <TextView
+                android:id="@+id/patientTreatmentView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="80dp"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="@string/inTreatment"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientQuotaView" />
+
+            <Button
+                android:id="@+id/patientDateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/date_button"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toTopOf="@+id/patientNameView"
+                app:layout_constraintEnd_toStartOf="@+id/patientNewDateButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientPicView"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+            <Button
+                android:id="@+id/patientNewDateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/new_date_button"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toTopOf="@+id/patientNameView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/patientDateButton"
+                app:layout_constraintTop_toBottomOf="@+id/patientPicView"
+                tools:ignore="TextContrastCheck" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

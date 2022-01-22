@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4F9FB"
+    tools:context=".ui.doctor.DoctorDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck,UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/doctorPicView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/doctor_pic"
+                android:src="@drawable/doctor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/doctorNameView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center|start"
+                android:text="Nombres y apellidos"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctorDateButton"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/doctorSpecialtyView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="Especialidad"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctorNameView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/doctorExperienceView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="Experiencia"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctorCodeView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/doctorCodeView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="N° tarjeta profesional"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctorOfficeView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/doctorOfficeView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="Consultorio"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctorSpecialtyView"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/doctorHomeView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="80dp"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center|start"
+                android:text="@string/home"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctorExperienceView" />
+
+            <Button
+                android:id="@+id/doctorDateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/date_button"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:backgroundTint="@color/custom_color"
+                app:layout_constraintBottom_toTopOf="@+id/doctorNameView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctorPicView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4F9FB"
+    tools:context=".ui.patient.NewPatientFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck,UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/doctorPicView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/doctor_pic"
+                android:src="@drawable/patient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <EditText
+                android:id="@+id/patientNameText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="270dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/patientName"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/patientLastnameText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/patientLastname"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientNameText"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/patientBirthPicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/patientBirth"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:longClickable="false"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientLastnameText"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/patientIdText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/ident"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientBirthPicker"
+                tools:ignore="TextContrastCheck" />
+
+
+            <Button
+                android:id="@+id/savePatientButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/button_save"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancelPatientButton"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/cancelPatientButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/savePatientButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/treatmentView"
+                tools:ignore="TextContrastCheck" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/treatmentView"
+                app:layout_constraintTop_toBottomOf="@+id/patientQuoataText">
+
+                <RadioButton
+                    android:id="@+id/pRadioButtonY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/button_affirmative"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck"
+                    tools:layout_editor_absoluteX="65dp"
+                    tools:layout_editor_absoluteY="660dp" />
+
+                <RadioButton
+                    android:id="@+id/pRadioButtonN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/button_negative"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="660dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/patientQuoataText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/patientQuota"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName|numberDecimal"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientIdText"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/treatmentView"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:text="@string/treatment"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patientQuoataText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewHistory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#F2F7F8"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/user_name"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/onHoldIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appointmentDateView"
+            android:layout_width="0dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/date"
+            android:textColor="#535252"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/onHoldIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+
+        <TextView
+            android:id="@+id/justText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="60dp"
+            android:text="@string/example_text"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentDateView" />
+
+        <ImageView
+            android:id="@+id/onHoldIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circular_corner"
+            android:contentDescription="@string/on_hold_icon"
+            android:visibility="invisible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/on_hold_icon"
+            app:tint="@color/custom_orange" />
+
+        <ImageView
+            android:id="@+id/unassistedIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circular_corner"
+            android:contentDescription="@string/unassisted_icon"
+            android:visibility="invisible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/unassisted_icon"
+            app:tint="@color/custom_red" />
+
+        <ImageView
+            android:id="@+id/assistedIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circular_corner"
+            android:contentDescription="@string/assisted_icon"
+            android:visibility="invisible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/assisted_icon"
+            app:tint="@color/custom_green"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <ImageView
+            android:id="@+id/signatureIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/signature"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onHoldIcon"
+            app:srcCompat="@drawable/gesture_icon"
+            app:tint="@color/custom_green" />
+
+        <TextView
+            android:id="@+id/n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:text="N°"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/onHoldIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/showMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/justText">
+
+
+            <Button
+
+                android:id="@+id/saveAssistedButton"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/assisted_button"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+            <Button
+
+                android:id="@+id/signatureButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/Sign"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:backgroundTint="@color/custom_color2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/saveAssistedButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
