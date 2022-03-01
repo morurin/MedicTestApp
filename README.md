@@ -1,4 +1,4 @@
-# QuileaiTestApp
+#TestApp
 App for technical test
 
 
